@@ -1,0 +1,7 @@
+command script import /usr/local/lib/python2.7/site-packages/voltron/entry.py
+command script import ~/.dotfiles/lldb-tools/scripts/lldb_tools.py
+
+settings set stop-line-count-before 10
+settings set stop-line-count-after 20
+
+settings set frame-format "frame #${frame.index}: ${frame.pc}{ \x1b\x5b36m${module.file.basename}\x1b\x5b39m{` \x1b\x5b33m${function.name-with-args} \x1b\x5b39m${function.pc-offset}}}{ at ${line.file.basename}:${line.number}}\n"
